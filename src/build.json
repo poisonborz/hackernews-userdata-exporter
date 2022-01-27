@@ -1,0 +1,7 @@
+{
+    "name": "HNUserDataExporter",
+    "description": "A utility that exports user data and submissions from the online message board Hacker News",
+    "company": "poisonborz",
+    "version": "0.8.0",
+    "copyright": "Licensed according to https://github.com/poisonborz/hackernews-userdata-exporter#readme"
+}
