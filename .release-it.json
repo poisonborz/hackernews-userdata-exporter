@@ -1,0 +1,16 @@
+{
+    "git": {
+        "commitMessage": "chore: release v${version}"
+    },
+    "github": {
+        "release": true,
+        "web": true,
+        "assets": ["dist/*"]
+    },
+    "hooks": {
+        "before:init": ["npm run test", "npm run build"]
+    },
+    "npm": {
+        "publish": false
+    }
+}
