@@ -29,6 +29,7 @@
         "dotenv-cli": "^4.1.1",
         "jest": "^27.4.7",
         "pkg": "^5.5.2",
+        "release-it": "^14.12.4",
         "resedit": "^1.5.0",
         "webpack": "^5.66.0",
         "webpack-cli": "^4.9.1"
