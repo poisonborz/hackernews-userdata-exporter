@@ -1,6 +1,6 @@
 {
     "name": "hackernews-userdata-exporter",
-    "version": "0.8.2",
+    "version": "0.8.3",
     "description": "A utility to export public user data from online forum Hacker News. Provides web and command-line versions.",
     "main": "src/exporter/node_run.js",
     "type": "module",
