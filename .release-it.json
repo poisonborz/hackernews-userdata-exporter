@@ -1,11 +1,11 @@
 {
     "git": {
-        "commitMessage": "chore: release v${version}"
+        "commitMessage": "automated: release v${version}"
     },
     "github": {
         "release": true,
         "web": true,
-        "assets": ["dist/*"]
+        "assets": ["/dist/*"]
     },
     "hooks": {
         "before:init": ["npm run test", "npm run build"]
