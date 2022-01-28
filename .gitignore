@@ -7,3 +7,4 @@ node_modules/
 workspace.code-workspace
 dist/
 temp/
+.env

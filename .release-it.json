@@ -11,5 +11,8 @@
     },
     "npm": {
         "publish": false
+    },
+    "scripts": {
+        "release": "dotenv release-it --"
     }
 }
