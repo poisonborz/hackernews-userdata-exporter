@@ -1,5 +1,10 @@
 ﻿
 import fs from 'fs'
+import {fileURLToPath} from 'url'
+import path from 'path'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 export const fileCleanup = (testOutputDirName, fileNamePartial) => {
     try {
@@ -11,12 +16,12 @@ export const fileCleanup = (testOutputDirName, fileNamePartial) => {
             })
         }
 
-        fs.readdir('./', (err, files) => {
+        fs.readdir(__dirname, (err, files) => {
             if (err) throw err
 
             for (const file of files) {
-                if (file.includes(fileNamePartial) && fs.existsSync(file)) {
-                    fs.unlink(file, err => {
+                if (file.includes(fileNamePartial)) {
+                    fs.unlink(path.join(__dirname, file), err => {
                         if (err) throw err
                     })
                 }
