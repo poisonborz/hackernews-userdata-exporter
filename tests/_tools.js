@@ -14,14 +14,12 @@ export const fileCleanup = (testOutputDirName, fileNamePartial) => {
             })
         }
 
-        fs.readdir(path.join(__dirname), (err, files) => {
+        fs.readdir(__dirname, (err, files) => {
             if (err) throw err
 
             for (const file of files) {
-                if (file.includes(fileNamePartial) && fs.existsSync(file)) {
-                    fs.unlink(file, err => {
-                        if (err) throw err
-                    })
+                if (file.includes(fileNamePartial) && fs.existsSync(path.join(__dirname, file))) {
+                    fs.unlinkSync(path.join(__dirname, file))
                 }
             }
         })
