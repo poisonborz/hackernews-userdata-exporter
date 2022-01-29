@@ -1,0 +1,16 @@
+﻿on: push
+name: Test
+jobs:
+  web-deploy:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Install
+      run: npm i
+
+    - name: Test
+      run: npm run test
