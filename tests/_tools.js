@@ -1,10 +1,8 @@
 ﻿
 import fs from 'fs'
-import {fileURLToPath} from 'url'
 import path from 'path'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+const __dirname = process.env.PWD
 
 export const fileCleanup = (testOutputDirName, fileNamePartial) => {
     try {
@@ -16,13 +14,12 @@ export const fileCleanup = (testOutputDirName, fileNamePartial) => {
             })
         }
 
-        fs.readdir(path.join(__dirname, '..'), (err, files) => {
+        fs.readdir(path.join(__dirname), (err, files) => {
             if (err) throw err
 
             for (const file of files) {
-                console.log('ttttttttttttttttttttt', path.join(__dirname, '..', file), fs.existsSync(path.join(__dirname, '..', file)))
-                if (file.includes(fileNamePartial) && fs.existsSync(path.join(__dirname, '..', file))) {
-                    fs.unlink(path.join(__dirname, '..', file), err => {
+                if (file.includes(fileNamePartial) && fs.existsSync(path.join(__dirname, file))) {
+                    fs.unlink(path.join(__dirname, file), err => {
                         if (err) throw err
                     })
                 }

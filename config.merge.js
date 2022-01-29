@@ -1,9 +1,7 @@
 ﻿
 import path from 'path'
-import { fileURLToPath } from 'url'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+const __dirname = process.env.PWD
 
 // commonjs compilation needed for pkg, which does not support ES modules at time of writing
 
