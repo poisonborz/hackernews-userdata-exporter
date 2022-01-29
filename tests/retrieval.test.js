@@ -1,16 +1,11 @@
 ﻿
-import path from 'path'
 import fs from 'fs'
-import { fileURLToPath } from 'url'
 import { fileCleanup } from './_tools'
 import * as utils from '../src/exporter/node.js'
 import { getFileName } from '../src/retrieval.js'
 
 // abandoned low content account
 const usernameFixture = 'binarykeats'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
 
 describe('hacker news specific tests', () => {
     afterAll(() => fileCleanup(null, '_export_'))
