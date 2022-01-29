@@ -1,10 +1,12 @@
 ﻿
 import fs from 'fs'
 import path from 'path'
+import { fileURLToPath } from 'url'
 
-const __dirname = process.env.PWD
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.join(path.dirname(__filename), '..')
 
-export const fileCleanup = (testOutputDirName, fileNamePartial) => {
+export const fileCleanup = async (testOutputDirName, fileNamePartial) => {
     try {
         // remove test output, wether in root or test output folder
 
@@ -14,15 +16,15 @@ export const fileCleanup = (testOutputDirName, fileNamePartial) => {
             })
         }
 
-        fs.readdir(__dirname, (err, files) => {
-            if (err) throw err
-
-            for (const file of files) {
-                if (file.includes(fileNamePartial) && fs.existsSync(path.join(__dirname, file))) {
-                    fs.unlinkSync(path.join(__dirname, file))
-                }
+        const files = await fs.promises.readdir(__dirname)
+        await Promise.all(files.map(async file => {
+            if (file.includes(fileNamePartial) && fs.existsSync(path.join(__dirname, file))) {
+                await fs.unlink(path.join(__dirname, file), (err) => {
+                    if (err) throw err
+                })
             }
-        })
+        }))
+
     } catch (err) {
         console.error('Error while teardown - ', err)
     }
