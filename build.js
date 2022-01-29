@@ -4,9 +4,11 @@ import path from 'path'
 import fs from 'fs'
 import { exec } from 'pkg'
 import webpack from 'webpack'
+import { fileURLToPath } from 'url'
 import webpackConfig from './config.merge.js'
 
-const __dirname = process.env.PWD
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const buildConfigPath = path.join(__dirname, 'config.build.json')
 const buildPlatformPath = path.join(__dirname, 'src', 'build.json')
