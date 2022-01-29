@@ -7,9 +7,11 @@
 
 A utility that exports a user's (publicly available) data and submissions on the online message board [Hacker News](https://news.ycombinator.com/). It can be used to regularly export your own data in both user and machine-readable format (as in a GDPR data request) since Hacker News does not provide such functionality. Uses the official FireBase API.
 
-**You can use it right away from the GitHub hosted [website]() or as a multi-platform (x64) command line utility downloadable on the [Releases]() page.**
+**To use it:**
+- **either visit the [website](https://poisonborz.github.io/hackernews-userdata-exporter/src/) hosted from this repository**
+- **or download the latest (x64) command line utility on the [Release](https://github.com/poisonborz/hackernews-userdata-exporter/releases/latest) page.**
 
-Uses my [userdata exporter](https://github.com/poisonborz/userdata-exporter), which you can use to create similar utilities.
+The utility extends [userdata exporter](https://github.com/poisonborz/userdata-exporter), which you can use to create similar utilities.
 
 _This is an open source project in no way affiliated with Hacker News or YCombinator._
 
