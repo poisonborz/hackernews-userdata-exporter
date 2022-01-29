@@ -85,9 +85,9 @@ export const getExport = async (utils, options) => {
     return getData(options.username, utils)
 }
 
-export const getFileName = (result, extension) => {
+export const getFileName = (result) => {
     const dateString = (new Date).toISOString().replace('T','_').replace(/:/g,'-').split('.')[0]
-    return `hn_export_${result.user.id}_${dateString}.${extension}`
+    return `hn_export_${result.user.id}_${dateString}`
 }
 
 export default {
