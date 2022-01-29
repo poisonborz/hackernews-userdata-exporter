@@ -20,8 +20,8 @@ export const fileCleanup = (testOutputDirName, fileNamePartial) => {
             if (err) throw err
 
             for (const file of files) {
-                if (file.includes(fileNamePartial) &&  fs.existsSync(path.join(__dirname, '..', file))) {
-                    fs.unlink(path.join(__dirname, '..', file), err => {
+                if (file.includes(fileNamePartial) && fs.existsSync(path.join(file))) {
+                    fs.unlink(path.join(file), err => {
                         if (err) throw err
                     })
                 }
