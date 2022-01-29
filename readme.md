@@ -1,8 +1,6 @@
 
 
-<img align="left" width="35" src="https://raw.githubusercontent.com/poisonborz/hackernews-userdata-exporter/main/src/icon.ico">
-<h1 float="left">Hacker News User Data Exporter</h1>
-<br clear="left"/>
+# <img width="23" src="https://raw.githubusercontent.com/poisonborz/hackernews-userdata-exporter/main/src/icon.ico"> Hacker News User Data Exporter
 
 
 [![Build](https://github.com/poisonborz/hackernews-userdata-exporter/actions/workflows/build.yml/badge.svg)](https://github.com/poisonborz/hackernews-userdata-exporter/actions/workflows/build.yml) [![Test](https://github.com/poisonborz/hackernews-userdata-exporter/actions/workflows/test.yml/badge.svg)](https://github.com/poisonborz/hackernews-userdata-exporter/actions/workflows/test.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
