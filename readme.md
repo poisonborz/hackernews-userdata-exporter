@@ -11,7 +11,7 @@ A utility that exports a user's (publicly available) data and submissions on the
 - **either visit the [website](https://poisonborz.github.io/hackernews-userdata-exporter/src/) hosted from this repository**
 - **or download the latest (x64) command line utility on the [Release](https://github.com/poisonborz/hackernews-userdata-exporter/releases/latest) page.**
 
-The utility extends [userdata exporter](https://github.com/poisonborz/userdata-exporter), which you can use to create similar utilities.
+Extends [userdata exporter](https://github.com/poisonborz/userdata-exporter), which you can use to create similar tools.
 
 _This is an open source project in no way affiliated with Hacker News or YCombinator._
 
