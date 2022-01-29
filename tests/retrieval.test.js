@@ -8,7 +8,7 @@ import { getFileName } from '../src/retrieval.js'
 const usernameFixture = 'binarykeats'
 
 describe('hacker news specific tests', () => {
-    afterAll(async () => await fileCleanup(null, '_export_'))
+    afterAll(() => fileCleanup(null, '_export_'))
 
     test('Should properly retrieve actual account data',  async () => {
         const result = await utils.generateExport({ username: usernameFixture }, utils)
