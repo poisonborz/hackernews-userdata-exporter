@@ -5,7 +5,7 @@
 
 [![Build](https://github.com/poisonborz/hackernews-userdata-exporter/actions/workflows/build.yml/badge.svg)](https://github.com/poisonborz/hackernews-userdata-exporter/actions/workflows/build.yml) [![Test](https://github.com/poisonborz/hackernews-userdata-exporter/actions/workflows/test.yml/badge.svg)](https://github.com/poisonborz/hackernews-userdata-exporter/actions/workflows/test.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-A utility that exports a user's (publicly available) data and submissions on the online message board [Hacker News](https://news.ycombinator.com/). It can be used to regularly export your own data in both user and machine-readable format (as in a GDPR data request) since Hacker News does not provide such functionality. Uses the official FireBase API.
+A utility that exports a user's (publicly available) data and submissions on the online message board [Hacker News](https://news.ycombinator.com/). It can be used to regularly export your own data in both user- and machine-readable format (as in a GDPR data request) since Hacker News does not provide such functionality. Uses the official FireBase API.
 
 **To use it:**
 - **either visit the [website](https://poisonborz.github.io/hackernews-userdata-exporter/src/) hosted from this repository**
